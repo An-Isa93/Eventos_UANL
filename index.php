@@ -8,35 +8,51 @@
 <body>
   <?php
     include("conexion.php");
-    $sql="SELECT*FROM Persona";
-    $resultado=mysqli_query($conexion,$sql);
+    $sql = "CALL VerEventos()";
+    $resultado = mysqli_query($conexion, $sql);
   ?>
 
-    <h1>Personas</h1>
-    <a href="">Agregar nueva Persona</a>
+    <h1>Eventos</h1>
+    <a href="agregar.php">Agregar nuevo Evento</a>
     <table>
         <thead>
             <tr>
                 <th>Nombre</th>
-                <th>Apellido Paterno</th>
-                <th>Apellido Materno</th>
-                <th>Correo</th>
-             
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Temario</th>
+                <th>Sede</th>
+                <th>Categoria</th>
+                <th>Dependencia</th>
+                <th>Costo</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
             <?php
-               while($filas=mysqli_fetch_assoc($resultado)){
+               while ($filas = mysqli_fetch_assoc($resultado)) {
             ?>
             <tr>
-                <td><?php echo $filas['Nombre']?></td>
-                <td><?php echo $filas['Apellido_paterno']?></td>
-                <td><?php echo $filas['Apellido_materno']?></td>
-                <td><?php echo $filas['Correo']?></td>
+                <td><?php echo $filas['Nombre_Evento']; ?></td>
+                <td><?php echo $filas['Fecha']; ?></td>
+                <td><?php echo $filas['Hora']; ?></td>
+                <td><?php echo $filas['Temario']; ?></td>
+                <td><?php echo $filas['Nombre_Sede']; ?></td>
+                <td><?php echo $filas['Nombre_Categoria']; ?></td>
+                <td><?php echo $filas['Nombre_Dependencia']; ?></td>
+                <td><?php echo $filas['Costo']; ?></td>
+                <td>
+                  <a href='editar.php?cv_evento=<?php echo $filas['Id']; ?>'>Editar</a>
+                </td>
+                <td>
+                <a href='eliminar.php?cv_evento=<?php echo $filas['Id']; ?>'>Eliminar</a>
+               </td>
             </tr>
-            <?php }?>
-            <?php echo "<a href=''>Editar</a>"; ?>
+            <?php } ?>
         </tbody>
     </table>
 </body>
 </html>
+<?php
+    mysqli_close($conexion);
+?>
