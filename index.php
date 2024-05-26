@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
 </head>
 <body>
   <?php
@@ -14,6 +15,8 @@
 
     <h1>Eventos</h1>
     <a href="agregar.php">Agregar nuevo Evento</a>
+    <a href="login.php">Cerrar Sesion</a>
+    <br><br>
     <table>
         <thead>
             <tr>
@@ -25,7 +28,7 @@
                 <th>Categoria</th>
                 <th>Dependencia</th>
                 <th>Costo</th>
-                <th>Acciones</th>
+                <th colspan="2">Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -40,7 +43,7 @@
                 <td><?php echo $filas['Nombre_Sede']; ?></td>
                 <td><?php echo $filas['Nombre_Categoria']; ?></td>
                 <td><?php echo $filas['Nombre_Dependencia']; ?></td>
-                <td><?php echo $filas['Costo']; ?></td>
+                <td>$<?php echo $filas['Costo']; ?></td>
                 <td>
                   <a href='editar.php?cv_evento=<?php echo $filas['Id']; ?>'>Editar</a>
                 </td>

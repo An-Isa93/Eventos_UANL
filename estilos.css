@@ -1,3 +1,6 @@
+*{
+  font-family: "Arial";
+}
 table{
     border-collapse:collapse;
     width: 100%;
@@ -7,33 +10,118 @@ th,td{
     padding: 8px;
 }
 tr:nth-child(even){
-    background-color: lightblue;
+    background-color: rgb(201, 218, 238);
 }
 th{
-    background-color: #4cafaa;
+    background-color: #487fd3;
     color: white;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.container{
+    margin-left: 15%;
+    margin-right: 2%;
 }
 a:link, a:visited{
     background-color: cornflowerblue;
     color:white;
-    padding: 14px 25px;
+    padding: 10px 20px;
     text-align: center;
     display: inline-block;
     border-radius: 5px;
 }
 a:hover, a:active{
-    background-color: mediumseagreen;
+    background-color: #49d186;
     border-radius: 5px;
 }
 h1,h2,h3,h4{
     text-align: center;
 }
-input[type=text],select{
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
+h1{
+    font-size: 50px;
+    color:#1d79ad;
+    font-weight: bolder;
+}
+button{
+    width: 70%;
+    height: 40px;
+    font-weight: bolder;
+    border:2px solid cornflowerblue;
+    color:black;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.login{
+    border-radius: 5px;
+    display: block;
+}
+.login button{
+    background: cornflowerblue!important;
+    margin-left: 4%;
+    font-size: 25px;
+    color:white;
     display: inline-block;
-    border: 1px solid black;
+    
+}
+
+button:active{
+    background-color: #50a4d4;
+    border-radius: 5px;
+}
+input,select{
+    font-size: 16px;
+    width: 80%;
+    padding: 12px 20px;
+    margin-bottom: 2%;
+    display: inline-block;
+    border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+}
+textarea:focus {
+    outline: none;
+    border: 1px solid #888787; /* Opcional: Cambiar el borde cuando está en foco */
+}
+
+/* Eliminar el borde del input cuando está en foco */
+input:focus {
+    outline: none;
+    border: 1px solid  #888787; /* Opcional: Cambiar el borde cuando está en foco */
+}
+label{
+    display: block;
+}
+textarea {
+    resize: vertical;
+    min-height: 100px;
+    width: 80%;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+}
+select {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+  
+    -webkit-appearance: none; /* Remove default arrow in Safari */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+}
+select:focus{
+    outline: none;
+    border: 1px solid  #888787; 
 }

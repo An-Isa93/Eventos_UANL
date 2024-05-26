@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edicion de eventos</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
 <?php
     include("conexion.php");
 
@@ -120,6 +129,7 @@
 ?>
 
 <h1>Editar Evento</h1>
+<div class="container">
 <form action="<?=$_SERVER['PHP_SELF']?>" method="post" enctype="multipart/form-data">
     <input type="hidden" name="cv_evento" value="<?php echo $cv_evento; ?>">
     <label>Nombre</label>
@@ -132,7 +142,7 @@
     <input type="time" name="hora" value="<?php echo $hora; ?>" required><br>
 
     <label>Temario</label>
-    <textarea name="temario" required><?php echo $temario; ?></textarea><br>
+    <textarea name="temario"><?php echo $temario; ?></textarea><br>
 
     <label>Sede</label>
     <select name="cv_sede" required>
@@ -170,9 +180,10 @@
         <?php } ?>
     </select><br>
 
-    <input type="submit" name="enviar" value="Actualizar Evento">
+    <button type="submit" name="enviar">Actualizar</button>
     <a href="index.php">Regresar</a>
 </form>
+<div>
 <?php 
     }
 ?>
