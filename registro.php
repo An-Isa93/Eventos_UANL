@@ -55,8 +55,10 @@
 
 
 ?>
+<h1>Registrar nuevo usuario</h1>
+<div class="container">
 <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
-        <div class="container">
+        
            <label>Nombre</label>
            <input type="text" name="nombre">
            <label>Apellido Paterno</label>
@@ -79,9 +81,11 @@
                 <option value="<?php echo $fila['cv_dependecia']; ?>"><?php echo ($fila['Nombre']); ?></option>
             <?php } ?>
         </select>
+        <div class="login">
            <button  type="submit" name="enviar">Registrar</button>
-           </div>
-       </div>
+        </div>
+      </div>
+    </div>
     </form>
 </body>
 </html>
