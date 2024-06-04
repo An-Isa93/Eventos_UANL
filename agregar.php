@@ -68,7 +68,8 @@
         $cv_dependecia = $_POST['cv_dependecia'];
         $cv_costo = $_POST['cv_costo'];
 
-        $sqlInsert = "CALL InsertEvento('$nombre', '$fecha', '$hora', '$temario', '$poster', $cv_sede, $cv_categoria, $cv_dependecia, $cv_costo)";
+        $sqlInsert = "CALL InsertEvento('$nombre', '$fecha', '$hora', '$temario', '$poster', $cv_sede,
+         $cv_categoria, $cv_dependecia, $cv_costo)";
         
         if (mysqli_query($conexion, $sqlInsert)) {
             echo "<script language='Javascript'>

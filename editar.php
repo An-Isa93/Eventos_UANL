@@ -78,7 +78,8 @@
         // Check if the statement prepared correctly
         if ($stmt) {
             // Bind parameters to the prepared statement
-            mysqli_stmt_bind_param($stmt, "issssiiii", $cv_evento, $nombre, $fecha, $hora, $temario, $sede, $categoria, $dependencia, $costo);
+            mysqli_stmt_bind_param($stmt, "issssiiii", $cv_evento, $nombre, $fecha, $hora, $temario, $sede,
+             $categoria, $dependencia, $costo);
 
             // Execute the statement
             mysqli_stmt_execute($stmt);

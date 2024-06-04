@@ -38,7 +38,8 @@
         $cv_dependencia = $_POST['cv_dependencia'];
    
 
-        $sqlInsert = "CALL Registro('$nombre', '$apellido_paterno', '$apellido_materno', '$correo', '$contraseña', $cv_rol, $cv_dependencia)";
+        $sqlInsert = "CALL Registro('$nombre', '$apellido_paterno', '$apellido_materno', 
+        '$correo', '$contraseña', $cv_rol, $cv_dependencia)";
         
         if (mysqli_query($conexion, $sqlInsert)) {
             echo "<script language='Javascript'>
